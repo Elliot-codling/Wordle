@@ -33,7 +33,6 @@ def reset_game():           #resets all the lists and variables
     inputted_word = ""          #text version of the number of inputted words
     number_words = 0            #number of words already entered
     word = generate_word()
-    print(word)
     
     #lists
     display_sprite = []             
