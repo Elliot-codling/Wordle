@@ -87,7 +87,7 @@ def main(events):
     global text_foreground
     global number_letters, inputted_word, number_words       
 
-    if not keys[pygame.K_BACKSPACE]:
+    if not keys[pygame.K_BACKSPACE] and keys[pygame.K_RETURN] == False:
         for event in events:
             if event.type == pygame.KEYDOWN and number_letters <= 4:
                 pygame.time.delay(80)           #pause for 80ms
@@ -96,7 +96,7 @@ def main(events):
                 text_foreground += [input_text]
                 inputted_word += event.unicode.upper()
 
-    else:
+    elif keys[pygame.K_BACKSPACE]:
         if not number_letters <= 0:         #not to backspace if the number of letters is not less than or equal to 0
             pygame.time.delay(80)
             number_letters -= 1
